@@ -1,4 +1,4 @@
-import { Component, VERSION } from '@angular/core';
+import { Component, VERSION, ChangeDetectionStrategy } from '@angular/core';
 
 @Component({
   selector: 'app-footer',
@@ -11,6 +11,7 @@ import { Component, VERSION } from '@angular/core';
       <a href="https://github.com/scttcper/ngx-toastr">Source</a>
     </footer>
   `,
+  changeDetection: ChangeDetectionStrategy.Eager,
   styles: [
     `
       .footer {
