@@ -4,7 +4,7 @@
   "scripts": {
     "ng": "ng",
     "start": "ng serve",
-    "build": "ng-packagr -p projects/ngx-toastr/ng-package.json",
+    "build": "ng build ngx-toastr",
     "publish": "npm publish --access=public dist/ngx-toastr/",
     "postbuild": "cpy README.md LICENSE dist/ngx-toastr",
     "test": "ng test --watch=false",
