@@ -191,3 +191,22 @@ button.toast-close-button {
     width: 25em;
   }
 }
+
+/* enter/leave animation
+   Lives here rather than in toast.component.scss so that custom toast components extending `Toast` get it too:
+   Angular inherits the `animate.enter` host attribute and the `--animation-*` host bindings, but never component
+   styles. The custom properties are set by `Toast`; the fallbacks keep this working without them. */
+.toast-in {
+  animation: toast-animation var(--animation-duration, 300ms) var(--animation-easing, ease-in);
+}
+.toast-out {
+  animation: toast-animation var(--animation-duration, 300ms) var(--animation-easing, ease-in) reverse forwards;
+}
+@keyframes toast-animation {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}

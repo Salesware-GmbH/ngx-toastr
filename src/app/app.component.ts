@@ -1,5 +1,5 @@
 import { CommonModule } from '@angular/common';
-import { Component } from '@angular/core';
+import { Component, ChangeDetectionStrategy } from '@angular/core';
 import { FormsModule } from '@angular/forms';
 import { ToastNoAnimationModule } from 'ngx-toastr';
 import { FooterComponent } from './footer/footer.component';
@@ -18,6 +18,7 @@ import { GhButtonModule } from '@ctrl/ngx-github-buttons';
     HeaderComponent,
     HomeComponent,
   ],
+  changeDetection: ChangeDetectionStrategy.Eager,
   templateUrl: './app.component.html',
 })
 export class AppComponent {}
