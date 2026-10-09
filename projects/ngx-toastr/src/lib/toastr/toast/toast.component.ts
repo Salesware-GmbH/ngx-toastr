@@ -4,7 +4,8 @@ import { ToastBase } from '../base-toast/base-toast.component';
 @Component({
   selector: '[toast-component]',
   templateUrl: '../base-toast/base-toast.component.html',
-  styleUrl: './toast.component.scss',
+  // The enter/leave animation lives in the global `toastr.css`, so that custom toast components extending `Toast`
+  // inherit it - component styles are never inherited, host attributes and bindings are.
   host: {
     '[style.--animation-easing]': 'params.easing',
     '[style.--animation-duration]': 'params.easeTime + "ms"',
